@@ -1,0 +1,4 @@
+- [ ] Update `_addChapter` function: Replace `firstWhere` with `where` and add empty check.
+- [ ] Update `_editChapter` function: Replace `firstWhere` with `where` and add empty check.
+- [ ] Update `_deleteChapter` function: Replace `firstWhere` with `where` and add empty check.
+- [ ] Run `flutter analyze` to verify fixes.
