@@ -1,75 +1,75 @@
-# 📚 Comic Reader App
+# Aplikasi Pembaca Komik "KomikKu"
 
-A modern, feature-rich Flutter application for reading manga/comics with offline capabilities, user authentication, and a beautiful Material Design interface.
+Aplikasi Flutter modern dan kaya fitur untuk membaca manga/komik dengan kemampuan offline, autentikasi pengguna, dan antarmuka Material Design yang indah.
 
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
 ![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
 
-## ✨ Features
+## Fitur
 
-### 🎯 Core Features
-- **📖 Manga Reading**: Full-featured manga reader with chapter navigation
-- **🔍 Search & Filter**: Search manga by title with real-time filtering
-- **⭐ Favorites System**: Save and manage favorite manga
-- **📚 Reading History**: Track reading progress and history
-- **🔄 Offline Support**: Download chapters for offline reading
-- **👤 User Authentication**: Secure login and registration system
+### Fitur Utama
+- **Pembaca Manga**: Pembaca manga lengkap dengan navigasi chapter
+- **Pencarian & Filter**: Cari manga berdasarkan judul dengan filter real-time
+- **Sistem Favorit**: Simpan dan kelola manga favorit
+- **Riwayat Membaca**: Lacak progress dan riwayat membaca
+- **Dukungan Offline**: Unduh chapter untuk dibaca offline
+- **Autentikasi Pengguna**: Sistem login dan registrasi yang aman
 
-### 🎨 User Experience
-- **🌙 Dark/Light Theme**: Adaptive theme support
-- **📱 Responsive Design**: Optimized for mobile and tablet
-- **⚡ Fast Loading**: Cached images and smooth navigation
-- **🔄 Pull-to-Refresh**: Easy data refresh functionality
-- **📊 Pagination**: Efficient loading of large manga lists
+### Pengalaman Pengguna
+- **Tema Gelap/Terang**: Dukungan tema adaptif
+- **Desain Responsif**: Dioptimalkan untuk mobile dan tablet
+- **Loading Cepat**: Cache gambar dan navigasi yang smooth
+- **Pull-to-Refresh**: Refresh data dengan mudah
+- **Paginasi**: Loading efisien untuk daftar manga besar
 
-### 🛠️ Technical Features
-- **🏗️ Clean Architecture**: Separated UI, business logic, and data layers
-- **📡 REST API Integration**: Robust API communication with error handling
-- **💾 Local Database**: SQLite for offline data storage
-- **🔐 Secure Storage**: Encrypted user credentials
-- **📦 State Management**: GetX for reactive state management
+### Fitur Teknis
+- **Arsitektur Bersih**: Pemisahan layer UI, logika bisnis, dan data
+- **Integrasi REST API**: Komunikasi API yang robust dengan error handling
+- **Database Lokal**: SQLite untuk penyimpanan data offline
+- **Penyimpanan Aman**: Kredensial pengguna terenkripsi
+- **State Management**: GetX untuk state management reaktif
 
-## 🚀 Tech Stack
+## Tech Stack
 
 ### Frontend
-- **Flutter** (>=2.17.0) - UI Framework
-- **Dart** - Programming Language
-- **Material Design** - Design System
+- **Flutter** (>=2.17.0) - Framework UI
+- **Dart** - Bahasa Pemrograman
+- **Material Design** - Sistem Desain
 
-### State Management & Navigation
-- **GetX** (^4.6.5) - State management and routing
+### State Management & Navigasi
+- **GetX** (^4.6.5) - State management dan routing
 
 ### Networking & Data
-- **HTTP** (^1.6.0) - API communication
-- **Cached Network Image** (^3.4.1) - Image caching
-- **SQLite** (^2.2.0+3) - Local database
-- **Shared Preferences** - Simple data storage
-- **Flutter Secure Storage** (^9.2.4) - Encrypted storage
+- **HTTP** (^1.6.0) - Komunikasi API
+- **Cached Network Image** (^3.4.1) - Cache gambar
+- **SQLite** (^2.2.0+3) - Database lokal
+- **Shared Preferences** - Penyimpanan data sederhana
+- **Flutter Secure Storage** (^9.2.4) - Penyimpanan terenkripsi
 
-### Utilities
-- **Path Provider** (^2.0.13) - File system access
-- **File Picker** (^8.0.0) - File selection
-- **Crypto** (^3.0.7) - Cryptographic functions
+### Utilitas
+- **Path Provider** (^2.0.13) - Akses sistem file
+- **File Picker** (^8.0.0) - Pemilihan file
+- **Crypto** (^3.0.7) - Fungsi kriptografi
 
-## 📡 API Endpoints
+## Endpoint API
 
-The app integrates with a Laravel-based manga scraper API hosted on Vercel.
+Aplikasi terintegrasi dengan API manga scraper berbasis Laravel yang di-host di Vercel.
 
 ### Base URL
 ```
 https://laravel-api-manga-scraper.vercel.app/api/api
 ```
 
-### Endpoints
+### Endpoint
 
-#### 1. Get Latest Manga (Paginated)
+#### 1. Ambil Manga Terbaru (Dengan Paginasi)
 ```http
 GET /terbaru/{page}
 ```
 
-**Parameters:**
-- `page` (integer): Page number (default: 1)
+**Parameter:**
+- `page` (integer): Nomor halaman (default: 1)
 
 **Response:**
 ```json
@@ -80,7 +80,7 @@ GET /terbaru/{page}
     "total_page": 10,
     "data": [
       {
-        "title": "Manga Title",
+        "title": "Judul Manga",
         "ratting": "8.5",
         "chapter": "Chapter 143",
         "img": "https://...",
@@ -91,25 +91,25 @@ GET /terbaru/{page}
 }
 ```
 
-#### 2. Get Manga Details
+#### 2. Ambil Detail Manga
 ```http
 GET /detail/{slug}
 ```
 
-**Parameters:**
-- `slug` (string): Manga slug/identifier
+**Parameter:**
+- `slug` (string): Slug/identifier manga
 
 **Response:**
 ```json
 {
   "success": true,
   "data": {
-    "title": "Manga Title",
+    "title": "Judul Manga",
     "img": "https://...",
     "ratting": "8.5",
-    "short_sinopsis": "Synopsis...",
+    "short_sinopsis": "Sinopsis...",
     "status": "Ongoing",
-    "pengarang": "Author Name",
+    "pengarang": "Nama Penulis",
     "tema": ["Action", "Adventure"],
     "chapter": [
       {
@@ -122,7 +122,7 @@ GET /detail/{slug}
       {
         "url": "similar-manga-slug",
         "img": "https://...",
-        "title": "Similar Manga",
+        "title": "Manga Serupa",
         "subtitle": "Action, Adventure"
       }
     ]
@@ -130,13 +130,13 @@ GET /detail/{slug}
 }
 ```
 
-#### 3. Get Chapter Images
+#### 3. Ambil Gambar Chapter
 ```http
 GET /baca/{chapter_slug}
 ```
 
-**Parameters:**
-- `chapter_slug` (string): Chapter slug/identifier
+**Parameter:**
+- `chapter_slug` (string): Slug/identifier chapter
 
 **Response:**
 ```json
@@ -153,19 +153,19 @@ GET /baca/{chapter_slug}
 }
 ```
 
-## 🛠️ Installation & Setup
+## Instalasi & Setup
 
-### Prerequisites
+### Prasyarat
 - **Flutter SDK** (>=2.17.0)
 - **Dart SDK** (>=2.17.0)
-- **Android Studio** or **VS Code** with Flutter extensions
-- **Android/iOS Simulator** or physical device
+- **Android Studio** atau **VS Code** dengan ekstensi Flutter
+- **Simulator Android/iOS** atau perangkat fisik
 
-### Installation Steps
+### Langkah Instalasi
 
-1. **Clone the repository**
+1. **Clone repository**
    ```bash
-   git clone https://github.com/your-username/comic-reader.git
+   git clone https://github.com/username-anda/comic-reader.git
    cd comic-reader
    ```
 
@@ -174,148 +174,148 @@ GET /baca/{chapter_slug}
    flutter pub get
    ```
 
-3. **Configure for your platform**
+3. **Konfigurasi untuk platform Anda**
 
-   **For Android:**
-   - Ensure Android SDK is properly configured
-   - Create `android/app/src/main/AndroidManifest.xml` if needed
+   **Untuk Android:**
+   - Pastikan Android SDK sudah dikonfigurasi dengan benar
+   - Buat `android/app/src/main/AndroidManifest.xml` jika diperlukan
 
-   **For iOS:**
-   - Ensure Xcode is installed
-   - Run `pod install` in `ios/` directory
+   **Untuk iOS:**
+   - Pastikan Xcode sudah terinstall
+   - Jalankan `pod install` di direktori `ios/`
 
-4. **Run the app**
+4. **Jalankan aplikasi**
    ```bash
-   # Debug mode
+   # Mode debug
    flutter run
 
-   # Release build
-   flutter build apk  # For Android
-   flutter build ios  # For iOS
+   # Build release
+   flutter build apk  # Untuk Android
+   flutter build ios  # Untuk iOS
    ```
 
-### Development Setup
+### Setup Development
 
-1. **Enable Flutter web support** (optional)
+1. **Aktifkan dukungan Flutter web** (opsional)
    ```bash
    flutter config --enable-web
    ```
 
-2. **Run tests**
+2. **Jalankan test**
    ```bash
    flutter test
    ```
 
-3. **Code formatting**
+3. **Format kode**
    ```bash
    flutter format lib/
    ```
 
-4. **Analyze code**
+4. **Analisis kode**
    ```bash
    flutter analyze
    ```
 
-## 📁 Project Structure
+## Struktur Proyek
 
 ```
 lib/
-├── main.dart                    # App entry point
-├── models/                      # Data models
-│   ├── manga_detail.dart        # Manga detail model
-│   ├── manga_list_item.dart     # Manga list item model
-│   └── user_model.dart          # User model
-├── services/                    # Business logic layer
+├── main.dart                    # Titik masuk aplikasi
+├── models/                      # Model data
+│   ├── manga_detail.dart        # Model detail manga
+│   ├── manga_list_item.dart     # Model item list manga
+│   └── user_model.dart          # Model user
+├── services/                    # Layer logika bisnis
 │   ├── api/
-│   │   └── manga_api_service.dart # API communication
-│   └── local/                   # Local data services
+│   │   └── manga_api_service.dart # Komunikasi API
+│   └── local/                   # Service data lokal
 │       ├── auth_service_local.dart
 │       ├── favorites_service.dart
 │       ├── history_service.dart
 │       └── db_helper.dart
-├── views/                       # UI layer
-│   ├── auth/                    # Authentication views
+├── views/                       # Layer UI
+│   ├── auth/                    # View autentikasi
 │   │   ├── login_view.dart
 │   │   └── register_view.dart
-│   ├── manga/                   # Manga-related views
-│   │   ├── home_view.dart       # Home screen
-│   │   ├── list_view.dart       # Manga list with search
-│   │   ├── detail_view.dart     # Manga details
-│   │   └── reader_view.dart     # Chapter reader
-│   ├── reader/                  # Reader-specific views
+│   ├── manga/                   # View terkait manga
+│   │   ├── home_view.dart       # Layar home
+│   │   ├── list_view.dart       # List manga dengan pencarian
+│   │   ├── detail_view.dart     # Detail manga
+│   │   └── reader_view.dart     # Pembaca chapter
+│   ├── reader/                  # View khusus reader
 │   │   └── account_reader_view.dart
-│   ├── author/                  # Author views
+│   ├── author/                  # View author
 │   │   ├── account_author_view.dart
 │   │   └── author_setting_view.dart
-│   └── core/                    # Core UI components
-│       ├── main_wrapper.dart    # Main app wrapper
+│   └── core/                    # Komponen UI core
+│       ├── main_wrapper.dart    # Wrapper aplikasi utama
 │       └── placeholder_view.dart
-└── widgets/                     # Reusable widgets (if any)
+└── widgets/                     # Widget reusable (jika ada)
 ```
 
-## 📱 Screenshots
+## Screenshot
 
-### Home Screen
-*Beautiful home screen with featured manga and trending sections*
+### Layar Home
+*Layar home yang indah dengan manga unggulan dan section trending*
 
-### Manga List with Search
-*Search functionality with real-time filtering*
+### List Manga dengan Pencarian
+*Fungsi pencarian dengan filter real-time*
 
-### Manga Reader
-*Smooth chapter reading experience with navigation*
+### Pembaca Manga
+*Pengalaman membaca chapter yang smooth dengan navigasi*
 
-### User Profile
-*User dashboard with favorites and reading history*
+### Profil Pengguna
+*Dashboard pengguna dengan favorit dan riwayat membaca*
 
-*Screenshots will be added soon*
+*Screenshot akan segera ditambahkan*
 
-## 🔧 Configuration
+## Konfigurasi
 
-### API Configuration
-Update the base URL in `lib/services/api/manga_api_service.dart`:
+### Konfigurasi API
+Update base URL di `lib/services/api/manga_api_service.dart`:
 ```dart
 static const String baseUrl = 'YOUR_API_BASE_URL';
 ```
 
-### Database Configuration
-The app uses SQLite for local storage. Database files are stored in:
+### Konfigurasi Database
+Aplikasi menggunakan SQLite untuk penyimpanan lokal. File database disimpan di:
 - **Android**: `data/data/com.example.comic_reader/databases/`
-- **iOS**: `Documents/` directory
+- **iOS**: Direktori `Documents/`
 
-## 🤝 Contributing
+## Kontribusi
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+1. Fork repository
+2. Buat branch fitur Anda (`git checkout -b fitur/FiturHebat`)
+3. Commit perubahan Anda (`git commit -m 'Tambah fitur hebat'`)
+4. Push ke branch (`git push origin fitur/FiturHebat`)
+5. Buat Pull Request
 
-### Development Guidelines
-- Follow Flutter best practices
-- Use meaningful commit messages
-- Write clean, readable code
-- Add comments for complex logic
-- Test your changes thoroughly
+### Panduan Development
+- Ikuti best practices Flutter
+- Gunakan pesan commit yang bermakna
+- Tulis kode yang bersih dan mudah dibaca
+- Tambahkan komentar untuk logika kompleks
+- Test perubahan Anda secara menyeluruh
 
-## 📄 License
+## Lisensi
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Proyek ini dilisensikan di bawah Lisensi MIT - lihat file [LICENSE](LICENSE) untuk detail.
 
-## 🙏 Acknowledgments
+## Ucapan Terima Kasih
 
-- **Flutter Team** for the amazing framework
-- **Material Design** for the design system
-- **Laravel API Manga Scraper** for providing the backend API
-- **GetX** for state management
-- **Cached Network Image** for image caching
+- **Tim Flutter** untuk framework yang amazing
+- **Material Design** untuk sistem desain
+- **Laravel API Manga Scraper** untuk menyediakan backend API
+- **GetX** untuk state management
+- **Cached Network Image** untuk cache gambar
 
-## 📞 Support
+## Dukungan
 
-If you have any questions or issues, please:
-- Open an issue on GitHub
-- Contact the maintainers
-- Check the documentation
+Jika Anda memiliki pertanyaan atau masalah, silakan:
+- Buat issue di GitHub
+- Hubungi maintainer
+- Periksa dokumentasi
 
 ---
 
-**Made with ❤️ using Flutter**
+**Dibuat dengan menggunakan Flutter**

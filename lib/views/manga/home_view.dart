@@ -80,7 +80,12 @@ class _HomeViewState extends State<HomeView> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('Gagal Memuat Data Utama:\n$_error', textAlign: TextAlign.center, style: const TextStyle(color: Colors.red)),
+                Text(
+                  'Ups! Data utama tidak dapat dimuat saat ini.\n$_error',
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(color: Colors.red),
+                ),
+
                 const SizedBox(height: 16),
                 ElevatedButton(
                   onPressed: _fetchHomeData,
