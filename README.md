@@ -1,6 +1,6 @@
 # Aplikasi Pembaca Komik "KomikKu"
 
-Aplikasi Flutter modern dan kaya fitur untuk membaca manga/komik dengan kemampuan offline, autentikasi pengguna, dan antarmuka Material Design yang indah.
+Aplikasi Flutter modern dan kaya fitur untuk membaca manga/komik, autentikasi pengguna, dan antarmuka Material Design yang indah.
 
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
 ![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
@@ -13,11 +13,9 @@ Aplikasi Flutter modern dan kaya fitur untuk membaca manga/komik dengan kemampua
 - **Pencarian & Filter**: Cari manga berdasarkan judul dengan filter real-time
 - **Sistem Favorit**: Simpan dan kelola manga favorit
 - **Riwayat Membaca**: Lacak progress dan riwayat membaca
-- **Dukungan Offline**: Unduh chapter untuk dibaca offline
 - **Autentikasi Pengguna**: Sistem login dan registrasi yang aman
 
 ### Pengalaman Pengguna
-- **Tema Gelap/Terang**: Dukungan tema adaptif
 - **Desain Responsif**: Dioptimalkan untuk mobile dan tablet
 - **Loading Cepat**: Cache gambar dan navigasi yang smooth
 - **Pull-to-Refresh**: Refresh data dengan mudah
