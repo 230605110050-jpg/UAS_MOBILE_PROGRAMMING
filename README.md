@@ -255,22 +255,6 @@ lib/
 └── widgets/                     # Widget reusable (jika ada)
 ```
 
-## Screenshot
-
-### Layar Home
-*Layar home yang indah dengan manga unggulan dan section trending*
-
-### List Manga dengan Pencarian
-*Fungsi pencarian dengan filter real-time*
-
-### Pembaca Manga
-*Pengalaman membaca chapter yang smooth dengan navigasi*
-
-### Profil Pengguna
-*Dashboard pengguna dengan favorit dan riwayat membaca*
-
-*Screenshot akan segera ditambahkan*
-
 ## Konfigurasi
 
 ### Konfigurasi API
