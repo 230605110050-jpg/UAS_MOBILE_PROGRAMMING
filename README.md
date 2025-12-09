@@ -6,6 +6,10 @@ Aplikasi Flutter modern dan kaya fitur untuk membaca manga/komik, autentikasi pe
 ![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
 
+## Demo
+
+[Demo Video](https://youtu.be/NQ92Z8rS8NI?feature=shared)
+
 ## Fitur
 
 ### Fitur Utama
