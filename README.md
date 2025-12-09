@@ -8,7 +8,7 @@ Aplikasi Flutter modern dan kaya fitur untuk membaca manga/komik, autentikasi pe
 
 ## Demo
 
-[Demo Video](https://youtu.be/NQ92Z8rS8NI?feature=shared)
+[![Demo Video](https://img.youtube.com/vi/UP5PGvU6RPg/maxresdefault.jpg)](https://youtu.be/NQ92Z8rS8NI?feature=shared)
 
 ## Fitur
 
